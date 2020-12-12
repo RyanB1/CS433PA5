@@ -21,8 +21,17 @@ public class UnionFind {
 	}
 
 	private void append(LinkedList arg1, LinkedList arg2) { // complete this function
+
 	}
 
 	public void doUnion(int x, int y) { // complete this function
+		LinkedList llX = find(x), llY = find(y);
+		if (!llX.equals(llY)) {
+			if (llX.size >= llY.size) {
+				append(llX, llY);
+			} else {
+				append(llY, llX);
+			}
+		}
 	}
 }
