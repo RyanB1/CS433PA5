@@ -96,10 +96,10 @@ public class TestCorrectness {
 		System.out.println("****************** Union Find ******************\n");
 		testUnionFind();
 		System.out.println("\n****************** Kruskal ******************\n");
-		//testKruskal();
+		testKruskal();
 		System.out.println("\n****************** KMP ******************\n");
-		//testKMP();
+		testKMP();
 		System.out.println("****************** Strongly Connected Components ******************\n");
-		//testSCC();
+		testSCC();
 	}
 }
