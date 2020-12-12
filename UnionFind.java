@@ -21,7 +21,21 @@ public class UnionFind {
 	}
 
 	private void append(LinkedList arg1, LinkedList arg2) { // complete this function
-
+		arg1.tail.next = arg2.head;
+		arg1.tail = arg2.tail;
+		arg1.size += arg2.size;
+		for (int i = 0; i < arg2.size; i++) {
+			int count = 0;
+			ListNode cur = arg2.head;
+			while (cur != null) {
+				if (count == i) {
+					representatives[cur.value] = arg1;
+				}
+				count++;
+				cur = cur.next;
+			}
+		}
+		arg2.head = null; arg2.tail = null;
 	}
 
 	public void doUnion(int x, int y) { // complete this function
